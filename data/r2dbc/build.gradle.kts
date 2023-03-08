@@ -1,16 +1,15 @@
-plugins {
-    id("org.springframework.boot") version "3.0.3"
-    kotlin("jvm") version "1.7.22"
-    kotlin("plugin.spring") version "1.7.22"
-}
-
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
-    runtimeOnly("dev.miku:r2dbc-mysql")
-
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
-    runtimeOnly("io.netty:netty-all")
+    implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+    implementation("org.springframework.data:spring-data-commons")
+    implementation("org.springframework:spring-tx")
+
+    runtimeOnly("org.mariadb:r2dbc-mariadb:1.1.2")
+
+    testRuntimeOnly("io.r2dbc:r2dbc-h2")
 }

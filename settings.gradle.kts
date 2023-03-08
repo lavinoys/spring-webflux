@@ -7,5 +7,5 @@ pluginManagement {
 rootProject.name = "spring-webflux"
 
 include(
-    ":data:r2dbc"
+    "data:r2dbc"
 )
