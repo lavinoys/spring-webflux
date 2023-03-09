@@ -1,5 +1,6 @@
 package me.lavinoys.app.api
 
+import me.lavinoys.app.api.doc.BoardApiDoc
 import me.lavinoys.app.api.handler.BoardHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -15,6 +16,7 @@ class ApiRouter {
     }
 
     @Bean
+    @BoardApiDoc
     fun BoardHandler.router() = coRouter {
         "/api/v1/boards".nest {
             POST("/", ::create)

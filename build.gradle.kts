@@ -60,6 +60,7 @@ subprojects {
     val dokkaPlugin by configurations
 
     dependencies {
+        implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("io.github.microutils:kotlin-logging:2.1.23")
         implementation("org.springframework.boot:spring-boot-starter")

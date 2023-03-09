@@ -10,13 +10,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     compileOnly("org.springframework.boot:spring-boot-configuration-processor")
 
-    val springdocVersion = "1.6.12"
-    implementation("org.springdoc:springdoc-openapi-webflux-ui:$springdocVersion")
-    implementation("org.springdoc:springdoc-openapi-kotlin:$springdocVersion")
-
     implementation("org.springframework:spring-context")
     implementation("org.springframework.data:spring-data-commons")
 
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.0.2")
 
     runtimeOnly("io.netty:netty-all")
 }
