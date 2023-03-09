@@ -1,2 +1,2 @@
 org.springframework.boot.env.EnvironmentPostProcessor=\
-  me.lavinoys.data.r2dbc.R2dbcConfigImport
+  me.lavinoys.data.db.board.BoardImportConfig

@@ -8,5 +8,10 @@ rootProject.name = "spring-webflux"
 
 include(
     "lib",
-    "data:r2dbc"
+    "domain",
+    "data:db-board",
+    "service",
+    "app",
+
+    "app:api"
 )

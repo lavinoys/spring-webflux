@@ -1,7 +1,7 @@
 spring.config.activate.on-profile: test
 
 db:
-  r2dbc:
+  board:
     url: "r2dbc:h2:mem:///test"
     port: 3306
     username: "test"
@@ -11,8 +11,8 @@ db:
 spring.config.activate.on-profile: local
 
 db:
-  r2dbc:
-    url: r2dbc:mariadb://localhost
+  board:
+    url: r2dbc:mariadb://localhost/board
     port: 3306
-    username: ""
-    password: ""
+    username: "root"
+    password: "root"

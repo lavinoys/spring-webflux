@@ -1,6 +1,6 @@
-package me.lavinoys.data.r2dbc.repository
+package me.lavinoys.data.db.board.repository
 
-import me.lavinoys.data.r2dbc.entity.BoardEntity
+import me.lavinoys.domain.entity.BoardEntity
 import org.springframework.data.repository.kotlin.CoroutineCrudRepository
 
 interface BoardRepository : CoroutineCrudRepository<BoardEntity, Long> {

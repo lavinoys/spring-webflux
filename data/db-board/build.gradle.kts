@@ -1,12 +1,13 @@
 dependencies {
     implementation(project(":lib"))
+    implementation(project(":domain"))
+
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.springframework.data:spring-data-commons")
     implementation("org.springframework:spring-tx")
 

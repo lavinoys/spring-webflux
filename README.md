@@ -11,3 +11,36 @@ tasks 블록은 compileKotlin, test를 비롯한 사용자 지정 빌드 작업�
 마지막으로 bootJar 및 bootRun 작업은 Spring Boot를 빌드하고 실행하도록 구성됩니다. 
 
 이 build.gradle.kts 파일은 Spring Boot Webflux 애플리케이션을 빌드하고 배포하기 위한 견고한 기반을 제공하며 특정 프로젝트 요구 사항을 충족하도록 쉽게 사용자 지정할 수 있습니다. 
+
+
+
+
+# mariadb
+```bash
+docker pull mariadb
+```
+
+```bash
+docker run \
+    --name mariadb \
+    -d \
+    -p 3306:3306 \
+    --restart=always \
+    -e MYSQL_ROOT_PASSWORD=root \
+    mariadb
+```
+or
+```bash
+docker run --name mariadb -d -p 3306:3306 --restart=always -e MYSQL_ROOT_PASSWORD=root mariadb
+```
+
+```sql
+create table if not exists boards
+(
+    `id`         bigint   NOT NULL AUTO_INCREMENT primary key,
+    `title`      varchar(100) charset utf8 not null,
+    `created_at` datetime default current_timestamp not null,
+    `updated_at` datetime default current_timestamp not null,
+    key idx_id(`id` desc)
+) engine=InnoDB default charset utf8;
+```

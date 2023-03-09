@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    group:
+      "default": "local"
+      "sandbox": ""
+      "cbt": ""
+      "prod": ""
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  shutdown: graceful
+  port: 8080
