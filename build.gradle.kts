@@ -72,6 +72,7 @@ subprojects {
         implementation("com.ninja-squad:springmockk:3.1.1")
 
         dokkaPlugin("org.jetbrains.dokka:versioning-plugin:1.6.0")
+        developmentOnly("org.springframework.boot:spring-boot-devtools")
     }
 
     dependencyManagement {
